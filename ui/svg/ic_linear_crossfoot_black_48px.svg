@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   fill="#000000"
+   height="48"
+   viewBox="0 0 24 24"
+   width="48"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="ic_linear_crossfoot_black_48px.svg"
+   inkscape:export-filename="/home/54967546315/programacao/agiler/ui/png/ic_crossfoot_black_24dp_1x.png"
+   inkscape:export-xdpi="45"
+   inkscape:export-ydpi="45">
+  <metadata
+     id="metadata14">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1551"
+     inkscape:window-height="876"
+     id="namedview12"
+     showgrid="false"
+     inkscape:zoom="9.8333333"
+     inkscape:cx="24"
+     inkscape:cy="24"
+     inkscape:window-x="49"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs4">
+    <path
+       d="M0 0h24v24H0V0z"
+       id="a" />
+    <clipPath
+       id="b-3">
+      <use
+         height="100%"
+         width="100%"
+         y="0"
+         x="0"
+         style="overflow:visible"
+         overflow="visible"
+         xlink:href="#a"
+         id="use8-6" />
+    </clipPath>
+  </defs>
+  <clipPath
+     id="b">
+    <use
+       overflow="visible"
+       xlink:href="#a"
+       id="use8" />
+  </clipPath>
+  <path
+     id="path4183"
+     d="m 15.523315,19.05587 c 0.975808,0.975808 2.559727,0.975808 3.535534,0 0.975808,-0.975807 0.975808,-2.559726 0,-3.535534 -0.72832,-0.72832 -1.781936,-0.905124 -2.679963,-0.558642 L 14.31419,12.896997 c 0.334842,-0.867855 0.175716,-1.878174 -0.49235,-2.602622 l -3.524486,3.524485 c 0.72445,0.668065 1.734768,0.827192 2.602622,0.492351 l 2.064697,2.064696 c -0.346482,0.898027 -0.169678,1.951643 0.558642,2.679963 z M 18.906314,8.6126097 c 0.975808,-0.9758074 0.975808,-2.5597267 0,-3.5355339 -0.975807,-0.9758074 -2.559726,-0.9758074 -3.535534,0 -0.72832,0.72832 -0.905124,1.7819366 -0.558642,2.679963 L 12.747441,9.8217354 C 11.879586,9.4868935 10.869267,9.6460194 10.144819,10.314082 l 3.524485,3.524483 c 0.668065,-0.724449 0.827192,-1.734767 0.492351,-2.602622 l 2.064696,-2.0646908 c 0.898027,0.3464816 1.951643,0.1696782 2.679963,-0.5586425 z M 19.5,9.5 c -1.03,0 -1.9,0.62 -2.29,1.5 l -2.92,0 C 13.9,10.12 13.03,9.5 12,9.5 10.97,9.5 10.1,10.12 9.71,11 L 6.79,11 C 6.4,10.12 5.53,9.5 4.5,9.5 3.12,9.5 2,10.62 2,12 c 0,1.38 1.12,2.5 2.5,2.5 1.03,0 1.9,-0.62 2.29,-1.5 l 2.92,0 c 0.39,0.88 1.26,1.5 2.29,1.5 1.03,0 1.9,-0.62 2.29,-1.5 l 2.92,0 c 0.39,0.88 1.26,1.5 2.29,1.5 1.38,0 2.5,-1.12 2.5,-2.5 0,-1.38 -1.12,-2.5 -2.5,-2.5 z" />
+</svg>
