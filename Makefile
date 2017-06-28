@@ -635,52 +635,40 @@ qrc_resources.cpp: resources.qrc \
 		../../Qt5.8.0/5.8/gcc_64/bin/rcc \
 		ui/png/ic_add_black_24dp_1x.png \
 		ui/png/ic_content_cut_black_24dp_1x.png \
-		ui/png/ic_create_new_folder_black_24dp.png \
-		ui/png/ic_add_black_24dp.png \
-		ui/png/ic_image_black_24dp_1x.png \
 		ui/png/ic_delete_black_24dp_1x.png \
-		ui/png/ic_brush_black_24dp.png \
 		ui/png/ic_flip_to_back_black_24dp.png \
 		ui/png/ic_add_circle_outline_black_24dp.png \
-		ui/png/ic_open_in_new_black_24dp.png \
 		ui/png/ic_pageview_black_24dp_1x.png \
-		ui/png/ic_remove_black_24dp.png \
-		ui/png/ic_table_24dp.png \
 		ui/png/ic_done_black_24dp_1x.png \
+		ui/png/ic_table_24dp.png \
 		ui/png/ic_add_circle_outline_black_24dp_1x.png \
 		ui/png/ic_save_black_24dp_1x.png \
 		ui/png/ic_zoom_out_black_24dp_1x.png \
 		ui/png/ic_flip_to_front_black_24dp.png \
 		ui/png/ic_unarchive_black_24dp_1x.png \
-		ui/png/ic_brush_black_24dp_1x.png \
-		ui/png/ic_create_new_folder_black_24dp_1x.png \
 		ui/png/ic_content_copy_black_24dp.png \
 		ui/png/ic_crossfoot_black_24dp_1x.png \
-		ui/png/ic_image_black_24dp.png \
 		ui/png/ic_save_black_24dp.png \
 		ui/png/ic_unarchive_black_24dp.png \
 		ui/png/ic_archive_black_24dp_1x.png \
 		ui/png/ic_table_24dp_1x.png \
 		ui/png/ic_content_paste_black_24dp.png \
 		ui/png/ic_select_all_black_24dp.png \
-		ui/png/ic_clear_black_24dp_1x.png \
 		ui/png/ic_zoom_in_black_24dp.png \
-		ui/png/ic_undo_black_24dp.png \
 		ui/png/ic_remove_black_24dp_1x.png \
-		ui/png/ic_redo_black_24dp.png \
+		ui/png/ic_undo_black_24dp.png \
 		ui/png/ic_remove_circle_outline_black_24dp_1x.png \
+		ui/png/ic_redo_black_24dp.png \
 		ui/png/ic_picture_as_pdf_black_24dp.png \
 		ui/png/ic_content_paste_black_24dp_1x.png \
 		ui/png/ic_open_in_new_black_24dp_1x.png \
 		ui/png/ic_select_all_black_24dp_1x.png \
-		ui/png/ic_pageview_black_24dp.png \
 		ui/png/ic_rounded_corner_black_24dp.png \
 		ui/png/ic_done_black_24dp.png \
 		ui/png/ic_flip_to_front_black_24dp_1x.png \
 		ui/png/ic_crossfoot_black_24dp.png \
 		ui/png/ic_archive_black_24dp.png \
 		ui/png/ic_zoom_out_black_24dp.png \
-		ui/png/ic_clear_black_24dp.png \
 		ui/png/ic_picture_as_pdf_black_24dp_1x.png \
 		ui/png/ic_undo_black_24dp_1x.png \
 		ui/png/ic_flip_to_back_black_24dp_1x.png \
