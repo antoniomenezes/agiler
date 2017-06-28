@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>819</width>
+    <height>539</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Agile-ER</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QMdiArea" name="mdiArea">
+      <property name="background">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>85</red>
+         <green>87</green>
+         <blue>83</blue>
+        </color>
+       </brush>
+      </property>
+      <property name="viewMode">
+       <enum>QMdiArea::TabbedView</enum>
+      </property>
+      <property name="documentMode">
+       <bool>true</bool>
+      </property>
+      <property name="tabsClosable">
+       <bool>true</bool>
+      </property>
+      <property name="tabsMovable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>819</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;Diagram</string>
+    </property>
+    <addaction name="actionNew_Diagram"/>
+    <addaction name="action_Save_Diagram"/>
+    <addaction name="separator"/>
+    <addaction name="actionNew_Table"/>
+    <addaction name="actionNew_Relationship"/>
+   </widget>
+   <addaction name="menu_File"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNew_Diagram"/>
+   <addaction name="action_Save_Diagram"/>
+   <addaction name="separator"/>
+   <addaction name="actionNew_Table"/>
+   <addaction name="actionNew_Relationship"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionNew_Table">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/png/ui/png/ic_table_24dp.png</normaloff>:/png/ui/png/ic_table_24dp.png</iconset>
+   </property>
+   <property name="text">
+    <string>New &amp;Table</string>
+   </property>
+  </action>
+  <action name="actionNew_Diagram">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/png/ui/png/ic_add_circle_outline_black_24dp.png</normaloff>:/png/ui/png/ic_add_circle_outline_black_24dp.png</iconset>
+   </property>
+   <property name="text">
+    <string>New &amp;Diagram</string>
+   </property>
+  </action>
+  <action name="action_Save_Diagram">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/png/ui/png/ic_save_black_24dp.png</normaloff>:/png/ui/png/ic_save_black_24dp.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Save Diagram</string>
+   </property>
+  </action>
+  <action name="actionNew_Relationship">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/png/ui/png/ic_crossfoot_black_24dp.png</normaloff>:/png/ui/png/ic_crossfoot_black_24dp.png</iconset>
+   </property>
+   <property name="text">
+    <string>New Relationship</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
