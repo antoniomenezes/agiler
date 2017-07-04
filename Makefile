@@ -49,12 +49,18 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = main.cpp \
-		mainwindow.cpp qrc_resources.cpp \
-		moc_mainwindow.cpp
+		mainwindow.cpp \
+		agdiagramitem.cpp \
+		agdiagramcontroler.cpp qrc_resources.cpp \
+		moc_mainwindow.cpp \
+		moc_agdiagramcontroler.cpp
 OBJECTS       = main.o \
 		mainwindow.o \
+		agdiagramitem.o \
+		agdiagramcontroler.o \
 		qrc_resources.o \
-		moc_mainwindow.o
+		moc_mainwindow.o \
+		moc_agdiagramcontroler.o
 DIST          = ../../Qt5.8.0/5.8/gcc_64/mkspecs/features/spec_pre.prf \
 		../../Qt5.8.0/5.8/gcc_64/mkspecs/common/unix.conf \
 		../../Qt5.8.0/5.8/gcc_64/mkspecs/common/linux.conf \
@@ -224,8 +230,13 @@ DIST          = ../../Qt5.8.0/5.8/gcc_64/mkspecs/features/spec_pre.prf \
 		../../Qt5.8.0/5.8/gcc_64/mkspecs/features/exceptions.prf \
 		../../Qt5.8.0/5.8/gcc_64/mkspecs/features/yacc.prf \
 		../../Qt5.8.0/5.8/gcc_64/mkspecs/features/lex.prf \
-		agiler.pro mainwindow.h main.cpp \
-		mainwindow.cpp
+		agiler.pro mainwindow.h \
+		agdiagramitem.h \
+		agdiagramcontroler.h \
+		agdiagramnotation.h main.cpp \
+		mainwindow.cpp \
+		agdiagramitem.cpp \
+		agdiagramcontroler.cpp
 QMAKE_TARGET  = agiler
 DESTDIR       = 
 TARGET        = agiler
@@ -602,8 +613,8 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents resources.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents ../../Qt5.8.0/5.8/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents mainwindow.h $(DISTDIR)/
-	$(COPY_FILE) --parents main.cpp mainwindow.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents mainwindow.h agdiagramitem.h agdiagramcontroler.h agdiagramnotation.h $(DISTDIR)/
+	$(COPY_FILE) --parents main.cpp mainwindow.cpp agdiagramitem.cpp agdiagramcontroler.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents mainwindow.ui $(DISTDIR)/
 
 
@@ -688,9 +699,9 @@ compiler_moc_predefs_clean:
 moc_predefs.h: ../../Qt5.8.0/5.8/gcc_64/mkspecs/features/data/dummy.cpp
 	g++ -pipe -O2 -std=gnu++11 -Wall -W -dM -E -o moc_predefs.h ../../Qt5.8.0/5.8/gcc_64/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: moc_mainwindow.cpp
+compiler_moc_header_make_all: moc_mainwindow.cpp moc_agdiagramcontroler.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_mainwindow.cpp
+	-$(DEL_FILE) moc_mainwindow.cpp moc_agdiagramcontroler.cpp
 moc_mainwindow.cpp: ../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/QMainWindow \
 		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qmainwindow.h \
 		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -805,6 +816,60 @@ moc_mainwindow.cpp: ../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/QMainWindow \
 		moc_predefs.h \
 		../../Qt5.8.0/5.8/gcc_64/bin/moc
 	/home/54967546315/Qt5.8.0/5.8/gcc_64/bin/moc $(DEFINES) --include ./moc_predefs.h -I/home/54967546315/Qt5.8.0/5.8/gcc_64/mkspecs/linux-g++ -I/home/54967546315/programacao/agiler -I/home/54967546315/Qt5.8.0/5.8/gcc_64/include -I/home/54967546315/Qt5.8.0/5.8/gcc_64/include/QtWidgets -I/home/54967546315/Qt5.8.0/5.8/gcc_64/include/QtGui -I/home/54967546315/Qt5.8.0/5.8/gcc_64/include/QtCore -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include mainwindow.h -o moc_mainwindow.cpp
+
+moc_agdiagramcontroler.cpp: ../../Qt5.8.0/5.8/gcc_64/include/QtCore/QObject \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qobject.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qobjectdefs.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qnamespace.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qglobal.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qconfig.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qtcore-config.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qsystemdetection.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qprocessordetection.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qcompilerdetection.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qtypeinfo.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qsysinfo.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qlogging.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qflags.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qtypetraits.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qatomic.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qbasicatomic.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qgenericatomic.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qatomic_cxx11.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qatomic_msvc.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qglobalstatic.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qmutex.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qnumeric.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qversiontagging.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qstring.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qchar.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qbytearray.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qrefcount.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qarraydata.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qstringbuilder.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qlist.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qalgorithms.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qiterator.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qhashfunctions.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qpair.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qbytearraylist.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qstringlist.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qregexp.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qstringmatcher.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qcoreevent.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qscopedpointer.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qmetatype.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qvarlengtharray.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qcontainerfwd.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qobject_impl.h \
+		agdiagramnotation.h \
+		agdiagramcontroler.h \
+		moc_predefs.h \
+		../../Qt5.8.0/5.8/gcc_64/bin/moc
+	/home/54967546315/Qt5.8.0/5.8/gcc_64/bin/moc $(DEFINES) --include ./moc_predefs.h -I/home/54967546315/Qt5.8.0/5.8/gcc_64/mkspecs/linux-g++ -I/home/54967546315/programacao/agiler -I/home/54967546315/Qt5.8.0/5.8/gcc_64/include -I/home/54967546315/Qt5.8.0/5.8/gcc_64/include/QtWidgets -I/home/54967546315/Qt5.8.0/5.8/gcc_64/include/QtGui -I/home/54967546315/Qt5.8.0/5.8/gcc_64/include/QtCore -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include agdiagramcontroler.h -o moc_agdiagramcontroler.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -1101,11 +1166,20 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o mainwindow.cpp
 
+agdiagramitem.o: agdiagramitem.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o agdiagramitem.o agdiagramitem.cpp
+
+agdiagramcontroler.o: agdiagramcontroler.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o agdiagramcontroler.o agdiagramcontroler.cpp
+
 qrc_resources.o: qrc_resources.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_resources.o qrc_resources.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp
+
+moc_agdiagramcontroler.o: moc_agdiagramcontroler.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_agdiagramcontroler.o moc_agdiagramcontroler.cpp
 
 ####### Install
 

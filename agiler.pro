@@ -24,9 +24,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    agdiagramitem.cpp \
+    agdiagramcontroler.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    agdiagramitem.h \
+    agdiagramcontroler.h \
+    agdiagramnotation.h
 
 FORMS    += mainwindow.ui
 
