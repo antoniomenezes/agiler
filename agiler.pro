@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui printsupport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -26,12 +26,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += main.cpp\
         mainwindow.cpp \
     agdiagramitem.cpp \
-    agdiagramcontroler.cpp
+    agdiagramcontroler.cpp \
+    agdiagramrelationshipitem.cpp \
+    agdiagramscene.cpp \
+    agdiagramtableitem.cpp
 
 HEADERS  += mainwindow.h \
     agdiagramitem.h \
     agdiagramcontroler.h \
-    agdiagramnotation.h
+    agdiagramnotation.h \
+    agdiagramrelationshipitem.h \
+    agdiagramscene.h \
+    agdiagramtableitem.h
 
 FORMS    += mainwindow.ui
 

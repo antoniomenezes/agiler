@@ -10,9 +10,10 @@ AgDiagramItem::AgDiagramItem(QMenu *contextMenu, QGraphicsItem *parent, QGraphic
     itemContextMenu = contextMenu;
     itemPolygon << QPointF(10, 10) << QPointF(50, 10)
                 << QPointF(50, 50) << QPointF(10, 50);
-    //setPolygon(itemPolygon);
+    if (internalItem)
+        internalItem->setPolygon(itemPolygon);
     setFlags(QGraphicsItem::ItemIsMovable | QGraphicsItem::ItemIsSelectable | QGraphicsItem::ItemSendsGeometryChanges);
-    //scene->addItem(this);
+    scene->addItem(this);
 }
 
 AgDiagramItem::~AgDiagramItem()
@@ -37,7 +38,8 @@ void AgDiagramItem::setName(QString name)
         nameTextItem->setPlainText(name);
         itemPolygon = QPolygonF( nameTextItem->boundingRect() );
         addToGroup(nameTextItem);
-        //setPolygon(itemPolygon);
+        if (internalItem)
+            internalItem->setPolygon(itemPolygon);
     }
 }
 
@@ -51,6 +53,11 @@ QString AgDiagramItem::id()
     return itemId;
 }
 
+QGraphicsPolygonItem *AgDiagramItem::polygon()
+{
+    return internalItem;
+}
+
 void AgDiagramItem::setVisibleName(bool value)
 {
     visibleName = value;
@@ -62,7 +69,8 @@ void AgDiagramItem::setVisibleName(bool value)
             nameTextItem->setTextInteractionFlags(Qt::TextEditorInteraction);
             itemPolygon = QPolygonF( nameTextItem->boundingRect().adjusted(-currentItemMargin, -currentItemMargin, currentItemMargin, currentItemMargin) );
             addToGroup(nameTextItem);
-            //setPolygon(itemPolygon);
+            if (internalItem)
+                internalItem->setPolygon(itemPolygon);
         }
         QPointF itemPos = this->pos();
         itemPos.setX(itemPos.x());
@@ -104,7 +112,8 @@ void AgDiagramItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * o
 {
     if (hasVisibleName() && (childItems().count() == 1)) {
         itemPolygon = QPolygonF( nameTextItem->boundingRect().adjusted(-currentItemMargin, -currentItemMargin, currentItemMargin, currentItemMargin) );
-        //setPolygon(itemPolygon);
+        if (internalItem)
+            internalItem->setPolygon(itemPolygon);
     }
 
     QGraphicsItemGroup::paint(painter, option, widget);
