@@ -405,9 +405,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.46533069"
-     inkscape:cx="188.53381"
-     inkscape:cy="740.39303"
+     inkscape:zoom="0.93066138"
+     inkscape:cx="317.20752"
+     inkscape:cy="827.52146"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -424,7 +424,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1654,12 +1654,12 @@
          x="574.70636"
          y="64.506721"
          style="font-size:15px"
-         id="tspan13832">borda rect ou </tspan><tspan
+         id="tspan13836">rect or round </tspan><tspan
          sodipodi:role="line"
          x="574.70636"
          y="83.256721"
          style="font-size:15px"
-         id="tspan13836">round rect</tspan></text>
+         id="tspan4743">rect border</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text13838"

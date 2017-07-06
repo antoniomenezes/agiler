@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui printsupport
+QT       += core gui printsupport svg
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -29,7 +29,8 @@ SOURCES += main.cpp\
     agdiagramcontroler.cpp \
     agdiagramrelationshipitem.cpp \
     agdiagramscene.cpp \
-    agdiagramtableitem.cpp
+    agdiagramtableitem.cpp \
+    agdiagramwindow.cpp
 
 HEADERS  += mainwindow.h \
     agdiagramitem.h \
@@ -37,9 +38,11 @@ HEADERS  += mainwindow.h \
     agdiagramnotation.h \
     agdiagramrelationshipitem.h \
     agdiagramscene.h \
-    agdiagramtableitem.h
+    agdiagramtableitem.h \
+    agdiagramwindow.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    agdiagramwindow.ui
 
 RESOURCES += \
     resources.qrc

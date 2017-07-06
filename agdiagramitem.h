@@ -19,7 +19,7 @@
 class AgDiagramItem : public QGraphicsItemGroup
 {
 public:
-    enum Type { Item, NodeItem, EdgeItem, GroupItem, TextItem, DecorationItem };
+    enum ClassType { Item, NodeItem, EdgeItem, GroupItem, TextItem, DecorationItem };
 
     enum State { Stay, Resizing, Editing, Other };
 
@@ -44,7 +44,8 @@ public:
     QFont font();
     void setId(QString value);
     QString id();
-    QGraphicsPolygonItem *polygon();
+    QGraphicsPolygonItem *polygonItem();
+    void setPolygon(QPolygonF polygon);
     AgDiagramControler *controler;
 
 protected:

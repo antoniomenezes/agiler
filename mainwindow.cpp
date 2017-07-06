@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include "agdiagramwindow.h"
 #include "ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -19,7 +20,7 @@ void MainWindow::on_actionNew_Diagram_triggered()
     lastSubWindowId++;
     QMdiSubWindow *subWindow = new QMdiSubWindow;
     //subWindow->setWidget(internalWidget1);
-    QWidget *widget = new QWidget;
+    AgDiagramWindow *widget = new AgDiagramWindow;
     widget->setWindowTitle("Diagram "+QString::number(lastSubWindowId));
     subWindow->setWidget(widget);
     subWindow->setWindowTitle("Diagram "+QString::number(lastSubWindowId));

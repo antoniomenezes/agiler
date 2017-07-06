@@ -53,9 +53,14 @@ QString AgDiagramItem::id()
     return itemId;
 }
 
-QGraphicsPolygonItem *AgDiagramItem::polygon()
+QGraphicsPolygonItem *AgDiagramItem::polygonItem()
 {
     return internalItem;
+}
+
+void AgDiagramItem::setPolygon(QPolygonF polygon)
+{
+    itemPolygon = polygon;
 }
 
 void AgDiagramItem::setVisibleName(bool value)

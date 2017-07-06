@@ -19,7 +19,7 @@ AgDiagramRelationshipItem::AgDiagramRelationshipItem(QMenu *contextMenu, QGraphi
     QPen pen;
     pen.setColor(Qt::black);
     pen.setWidth(2);
-    setPen(pen);
+    polygonItem()->setPen(pen);
 }
 
 AgDiagramRelationshipItem::~AgDiagramRelationshipItem()
@@ -38,8 +38,8 @@ void AgDiagramRelationshipItem::setBeginTable(AgDiagramTableItem *tableItem)
         QLineF upperLine;
         QLineF lowerLine;
 
-        centerLine.setP1(beginTableItem->polygon().boundingRect().center());
-        centerLine.setP2(endTableItem->polygon().boundingRect().center());
+        centerLine.setP1(beginTableItem->polygonItem()->boundingRect().center());
+        centerLine.setP2(endTableItem->polygonItem()->boundingRect().center());
 
         upperLine = centerLine.translated(10, -10);
         lowerLine = centerLine.translated(-10, 10);
@@ -407,9 +407,9 @@ void AgDiagramRelationshipItem::setInternalLineItems()
 
             setPolygon(thisPolygon);
 
-            this->setBrush(Qt::transparent);
+            this->polygonItem()->setBrush(Qt::transparent);
             //this->setBrush(Qt::gray);
-            this->setPen(QPen(Qt::transparent));
+            this->polygonItem()->setPen(QPen(Qt::transparent));
 
             //QLineF perpendicularCenterLine = centerLine.normalVector().translated(+20,+20);
 

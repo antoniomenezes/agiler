@@ -13,6 +13,7 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QDockWidget>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMdiArea>
@@ -39,6 +40,12 @@ public:
     QMenu *menu_File;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
+    QDockWidget *modelDockWidget;
+    QWidget *dockWidgetContents;
+    QDockWidget *subjectDockWidget;
+    QWidget *dockWidgetContents_2;
+    QDockWidget *patternsDockWidget;
+    QWidget *dockWidgetContents_3;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -93,11 +100,29 @@ public:
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
-        mainToolBar->setOrientation(Qt::Vertical);
-        MainWindow->addToolBar(Qt::LeftToolBarArea, mainToolBar);
+        mainToolBar->setOrientation(Qt::Horizontal);
+        MainWindow->addToolBar(Qt::TopToolBarArea, mainToolBar);
         statusBar = new QStatusBar(MainWindow);
         statusBar->setObjectName(QStringLiteral("statusBar"));
         MainWindow->setStatusBar(statusBar);
+        modelDockWidget = new QDockWidget(MainWindow);
+        modelDockWidget->setObjectName(QStringLiteral("modelDockWidget"));
+        dockWidgetContents = new QWidget();
+        dockWidgetContents->setObjectName(QStringLiteral("dockWidgetContents"));
+        modelDockWidget->setWidget(dockWidgetContents);
+        MainWindow->addDockWidget(static_cast<Qt::DockWidgetArea>(1), modelDockWidget);
+        subjectDockWidget = new QDockWidget(MainWindow);
+        subjectDockWidget->setObjectName(QStringLiteral("subjectDockWidget"));
+        dockWidgetContents_2 = new QWidget();
+        dockWidgetContents_2->setObjectName(QStringLiteral("dockWidgetContents_2"));
+        subjectDockWidget->setWidget(dockWidgetContents_2);
+        MainWindow->addDockWidget(static_cast<Qt::DockWidgetArea>(1), subjectDockWidget);
+        patternsDockWidget = new QDockWidget(MainWindow);
+        patternsDockWidget->setObjectName(QStringLiteral("patternsDockWidget"));
+        dockWidgetContents_3 = new QWidget();
+        dockWidgetContents_3->setObjectName(QStringLiteral("dockWidgetContents_3"));
+        patternsDockWidget->setWidget(dockWidgetContents_3);
+        MainWindow->addDockWidget(static_cast<Qt::DockWidgetArea>(1), patternsDockWidget);
 
         menuBar->addAction(menu_File->menuAction());
         menu_File->addAction(actionNew_Diagram);
@@ -124,6 +149,9 @@ public:
         action_Save_Diagram->setText(QApplication::translate("MainWindow", "&Save Diagram", Q_NULLPTR));
         actionNew_Relationship->setText(QApplication::translate("MainWindow", "New Relationship", Q_NULLPTR));
         menu_File->setTitle(QApplication::translate("MainWindow", "&Diagram", Q_NULLPTR));
+        modelDockWidget->setWindowTitle(QApplication::translate("MainWindow", "Model", Q_NULLPTR));
+        subjectDockWidget->setWindowTitle(QApplication::translate("MainWindow", "Subject Areas", Q_NULLPTR));
+        patternsDockWidget->setWindowTitle(QApplication::translate("MainWindow", "Patterns", Q_NULLPTR));
     } // retranslateUi
 
 };

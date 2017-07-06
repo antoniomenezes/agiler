@@ -116,7 +116,7 @@ void AgDiagramScene::mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent)
         item->setFont(myFont);
         item->addColumn("column_name data_type null_option default_option");
         item->setItemMargin(currentItemMargin);
-        item->setBrush(myItemColor);
+        item->polygonItem()->setBrush(myItemColor);
         connect(this, SIGNAL(notationChanged(AgDiagramNotation::Notation)), item->controler, SLOT(setNotation(AgDiagramNotation::Notation)));
         addItem(item);
         item->setPos(mouseEvent->scenePos());
@@ -169,8 +169,8 @@ void AgDiagramScene::mouseReleaseEvent(QGraphicsSceneMouseEvent *mouseEvent)
             AgDiagramRelationshipItem *relationship = new AgDiagramRelationshipItem(myItemMenu, 0, this);
             relationship->setBeginTable(startItem);
             relationship->setEndTable(endItem);
-            relationship->setBrush(Qt::white);
-            relationship->setPen(lineColor());
+            relationship->polygonItem()->setBrush(Qt::white);
+            relationship->polygonItem()->setPen(lineColor());
             relationship->setSelected(true);
             relationship->controler->setNotation(notation());
             connect(this, SIGNAL(notationChanged(AgDiagramNotation::Notation)), relationship->controler, SLOT(setNotation(AgDiagramNotation::Notation)));
@@ -292,7 +292,7 @@ AgDiagramTableItem *AgDiagramScene::addTableItem(QString tableName, QMenu *conte
     item->setPos(QPoint(x,y));
     item->setFont(myFont);
     item->setItemMargin(currentItemMargin);
-    item->setBrush(myItemColor);
+    item->polygonItem()->setBrush(myItemColor);
     connect(this, SIGNAL(notationChanged(AgDiagramNotation::Notation)), item->controler, SLOT(setNotation(AgDiagramNotation::Notation)));
     addItem(item);
     //item->setPos(sceneRect().center());
@@ -305,8 +305,8 @@ AgDiagramRelationshipItem *AgDiagramScene::addRelationshipItem(AgDiagramTableIte
     AgDiagramRelationshipItem *relationship = new AgDiagramRelationshipItem(contextMenu, 0, this);
     relationship->setBeginTable(beginTableItem);
     relationship->setEndTable(endTableItem);
-    relationship->setBrush(Qt::white);
-    relationship->setPen(lineColor());
+    relationship->polygonItem()->setBrush(Qt::white);
+    relationship->polygonItem()->setPen(lineColor());
     relationship->setSelected(true);
     relationship->controler->setNotation(notation());
     connect(this, SIGNAL(notationChanged(AgDiagramNotation::Notation)), relationship->controler, SLOT(setNotation(AgDiagramNotation::Notation)));

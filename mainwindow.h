@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QMdiArea>
 #include <QMdiSubWindow>
+#include <QGraphicsView>
 
 namespace Ui {
 class MainWindow;
