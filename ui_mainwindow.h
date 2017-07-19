@@ -15,12 +15,14 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDockWidget>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMdiArea>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
+#include <QtWidgets/QTreeWidget>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -42,10 +44,19 @@ public:
     QStatusBar *statusBar;
     QDockWidget *modelDockWidget;
     QWidget *dockWidgetContents;
+    QVBoxLayout *verticalLayout_2;
+    QLineEdit *lineEditSearchModel;
+    QTreeWidget *treeWidgetModels;
     QDockWidget *subjectDockWidget;
     QWidget *dockWidgetContents_2;
+    QVBoxLayout *verticalLayout_3;
+    QLineEdit *lineEditSearchSubjectArea;
+    QTreeWidget *treeWidgetSubjectAreas;
     QDockWidget *patternsDockWidget;
     QWidget *dockWidgetContents_3;
+    QVBoxLayout *verticalLayout_4;
+    QLineEdit *lineEditSearchPattern;
+    QTreeWidget *treeWidgetPatterns;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -109,18 +120,78 @@ public:
         modelDockWidget->setObjectName(QStringLiteral("modelDockWidget"));
         dockWidgetContents = new QWidget();
         dockWidgetContents->setObjectName(QStringLiteral("dockWidgetContents"));
+        verticalLayout_2 = new QVBoxLayout(dockWidgetContents);
+        verticalLayout_2->setSpacing(4);
+        verticalLayout_2->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        verticalLayout_2->setContentsMargins(4, 2, 2, 2);
+        lineEditSearchModel = new QLineEdit(dockWidgetContents);
+        lineEditSearchModel->setObjectName(QStringLiteral("lineEditSearchModel"));
+        lineEditSearchModel->setClearButtonEnabled(true);
+
+        verticalLayout_2->addWidget(lineEditSearchModel);
+
+        treeWidgetModels = new QTreeWidget(dockWidgetContents);
+        QTreeWidgetItem *__qtreewidgetitem = new QTreeWidgetItem();
+        __qtreewidgetitem->setText(0, QStringLiteral("1"));
+        treeWidgetModels->setHeaderItem(__qtreewidgetitem);
+        treeWidgetModels->setObjectName(QStringLiteral("treeWidgetModels"));
+        treeWidgetModels->header()->setVisible(false);
+
+        verticalLayout_2->addWidget(treeWidgetModels);
+
         modelDockWidget->setWidget(dockWidgetContents);
         MainWindow->addDockWidget(static_cast<Qt::DockWidgetArea>(1), modelDockWidget);
         subjectDockWidget = new QDockWidget(MainWindow);
         subjectDockWidget->setObjectName(QStringLiteral("subjectDockWidget"));
         dockWidgetContents_2 = new QWidget();
         dockWidgetContents_2->setObjectName(QStringLiteral("dockWidgetContents_2"));
+        verticalLayout_3 = new QVBoxLayout(dockWidgetContents_2);
+        verticalLayout_3->setSpacing(4);
+        verticalLayout_3->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
+        verticalLayout_3->setContentsMargins(4, 2, 2, 2);
+        lineEditSearchSubjectArea = new QLineEdit(dockWidgetContents_2);
+        lineEditSearchSubjectArea->setObjectName(QStringLiteral("lineEditSearchSubjectArea"));
+        lineEditSearchSubjectArea->setClearButtonEnabled(true);
+
+        verticalLayout_3->addWidget(lineEditSearchSubjectArea);
+
+        treeWidgetSubjectAreas = new QTreeWidget(dockWidgetContents_2);
+        QTreeWidgetItem *__qtreewidgetitem1 = new QTreeWidgetItem();
+        __qtreewidgetitem1->setText(0, QStringLiteral("1"));
+        treeWidgetSubjectAreas->setHeaderItem(__qtreewidgetitem1);
+        treeWidgetSubjectAreas->setObjectName(QStringLiteral("treeWidgetSubjectAreas"));
+        treeWidgetSubjectAreas->header()->setVisible(false);
+
+        verticalLayout_3->addWidget(treeWidgetSubjectAreas);
+
         subjectDockWidget->setWidget(dockWidgetContents_2);
         MainWindow->addDockWidget(static_cast<Qt::DockWidgetArea>(1), subjectDockWidget);
         patternsDockWidget = new QDockWidget(MainWindow);
         patternsDockWidget->setObjectName(QStringLiteral("patternsDockWidget"));
         dockWidgetContents_3 = new QWidget();
         dockWidgetContents_3->setObjectName(QStringLiteral("dockWidgetContents_3"));
+        verticalLayout_4 = new QVBoxLayout(dockWidgetContents_3);
+        verticalLayout_4->setSpacing(4);
+        verticalLayout_4->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
+        verticalLayout_4->setContentsMargins(4, 2, 2, 2);
+        lineEditSearchPattern = new QLineEdit(dockWidgetContents_3);
+        lineEditSearchPattern->setObjectName(QStringLiteral("lineEditSearchPattern"));
+        lineEditSearchPattern->setClearButtonEnabled(true);
+
+        verticalLayout_4->addWidget(lineEditSearchPattern);
+
+        treeWidgetPatterns = new QTreeWidget(dockWidgetContents_3);
+        QTreeWidgetItem *__qtreewidgetitem2 = new QTreeWidgetItem();
+        __qtreewidgetitem2->setText(0, QStringLiteral("1"));
+        treeWidgetPatterns->setHeaderItem(__qtreewidgetitem2);
+        treeWidgetPatterns->setObjectName(QStringLiteral("treeWidgetPatterns"));
+        treeWidgetPatterns->header()->setVisible(false);
+
+        verticalLayout_4->addWidget(treeWidgetPatterns);
+
         patternsDockWidget->setWidget(dockWidgetContents_3);
         MainWindow->addDockWidget(static_cast<Qt::DockWidgetArea>(1), patternsDockWidget);
 
@@ -150,8 +221,11 @@ public:
         actionNew_Relationship->setText(QApplication::translate("MainWindow", "New Relationship", Q_NULLPTR));
         menu_File->setTitle(QApplication::translate("MainWindow", "&Diagram", Q_NULLPTR));
         modelDockWidget->setWindowTitle(QApplication::translate("MainWindow", "Model", Q_NULLPTR));
+        lineEditSearchModel->setPlaceholderText(QApplication::translate("MainWindow", "Search Model Element", Q_NULLPTR));
         subjectDockWidget->setWindowTitle(QApplication::translate("MainWindow", "Subject Areas", Q_NULLPTR));
+        lineEditSearchSubjectArea->setPlaceholderText(QApplication::translate("MainWindow", "Search Subject Area", Q_NULLPTR));
         patternsDockWidget->setWindowTitle(QApplication::translate("MainWindow", "Patterns", Q_NULLPTR));
+        lineEditSearchPattern->setPlaceholderText(QApplication::translate("MainWindow", "Search Pattern", Q_NULLPTR));
     } // retranslateUi
 
 };

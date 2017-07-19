@@ -8,6 +8,12 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     lastSubWindowId = 0;
+    setUnifiedTitleAndToolBarOnMac(true);
+
+    tabifyDockWidget(ui->modelDockWidget, ui->subjectDockWidget);
+    tabifyDockWidget(ui->modelDockWidget, ui->patternsDockWidget);
+    ui->modelDockWidget->raise();
+
 }
 
 MainWindow::~MainWindow()

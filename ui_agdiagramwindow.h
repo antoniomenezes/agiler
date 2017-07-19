@@ -32,7 +32,7 @@ public:
             AgDiagramWindow->setObjectName(QStringLiteral("AgDiagramWindow"));
         AgDiagramWindow->resize(739, 494);
         verticalLayout = new QVBoxLayout(AgDiagramWindow);
-        verticalLayout->setSpacing(0);
+        verticalLayout->setSpacing(2);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
         graphicsView = new QGraphicsView(AgDiagramWindow);
