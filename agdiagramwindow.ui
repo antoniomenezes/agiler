@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
+  <layout class="QHBoxLayout" name="horizontalLayout">
    <property name="spacing">
     <number>0</number>
    </property>
@@ -30,10 +30,104 @@
     <number>0</number>
    </property>
    <item>
-    <widget class="QGraphicsView" name="graphicsView"/>
+    <widget class="QFrame" name="frame">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <property name="spacing">
+       <number>2</number>
+      </property>
+      <property name="leftMargin">
+       <number>2</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QToolBar" name="widget">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>16</width>
+          <height>16</height>
+         </size>
+        </property>
+        <addaction name="actionSelect"/>
+        <addaction name="actionNew_Table"/>
+        <addaction name="actionNew_Relationship"/>
+        <addaction name="actionNew_Label"/>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGraphicsView" name="graphicsView"/>
+      </item>
+     </layout>
+    </widget>
    </item>
   </layout>
+  <action name="actionSelect">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/png/ui/png/pointer_24dp.png</normaloff>:/png/ui/png/pointer_24dp.png</iconset>
+   </property>
+   <property name="text">
+    <string>Select</string>
+   </property>
+  </action>
+  <action name="actionNew_Table">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/png/ui/png/ic_table_24dp.png</normaloff>:/png/ui/png/ic_table_24dp.png</iconset>
+   </property>
+   <property name="text">
+    <string>New Table</string>
+   </property>
+  </action>
+  <action name="actionNew_Relationship">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/png/ui/png/ic_crossfoot_black_24dp.png</normaloff>:/png/ui/png/ic_crossfoot_black_24dp.png</iconset>
+   </property>
+   <property name="text">
+    <string>New Relationship</string>
+   </property>
+  </action>
+  <action name="actionNew_Label">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/png/ui/png/ic_text_format_black_24dp.png</normaloff>:/png/ui/png/ic_text_format_black_24dp.png</iconset>
+   </property>
+   <property name="text">
+    <string>New Label</string>
+   </property>
+  </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

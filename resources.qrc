@@ -47,5 +47,11 @@
         <file>ui/png/ic_zoom_out_black_24dp_1x.png</file>
         <file>ui/png/ic_crossfoot_black_24dp.png</file>
         <file>ui/png/ic_crossfoot_black_24dp_1x.png</file>
+        <file>ui/png/ic_create_new_folder_black_24dp.png</file>
+        <file>ui/png/ic_create_new_folder_black_24dp_1x.png</file>
+        <file>ui/png/ic_text_format_black_24dp.png</file>
+        <file>ui/png/ic_text_format_black_24dp_1x.png</file>
+        <file>ui/png/pointer_24dp.png</file>
+        <file>ui/png/pointer_24dp_1x.png</file>
     </qresource>
 </RCC>

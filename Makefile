@@ -670,6 +670,8 @@ qrc_resources.cpp: resources.qrc \
 		../../Qt5.8.0/5.8/gcc_64/bin/rcc \
 		ui/png/ic_add_black_24dp_1x.png \
 		ui/png/ic_content_cut_black_24dp_1x.png \
+		ui/png/ic_create_new_folder_black_24dp.png \
+		ui/png/pointer_24dp_1x.png \
 		ui/png/ic_delete_black_24dp_1x.png \
 		ui/png/ic_flip_to_back_black_24dp.png \
 		ui/png/ic_add_circle_outline_black_24dp.png \
@@ -679,8 +681,10 @@ qrc_resources.cpp: resources.qrc \
 		ui/png/ic_add_circle_outline_black_24dp_1x.png \
 		ui/png/ic_save_black_24dp_1x.png \
 		ui/png/ic_zoom_out_black_24dp_1x.png \
+		ui/png/ic_text_format_black_24dp_1x.png \
 		ui/png/ic_flip_to_front_black_24dp.png \
 		ui/png/ic_unarchive_black_24dp_1x.png \
+		ui/png/ic_create_new_folder_black_24dp_1x.png \
 		ui/png/ic_content_copy_black_24dp.png \
 		ui/png/ic_crossfoot_black_24dp_1x.png \
 		ui/png/ic_save_black_24dp.png \
@@ -695,6 +699,7 @@ qrc_resources.cpp: resources.qrc \
 		ui/png/ic_remove_circle_outline_black_24dp_1x.png \
 		ui/png/ic_redo_black_24dp.png \
 		ui/png/ic_picture_as_pdf_black_24dp.png \
+		ui/png/pointer_24dp.png \
 		ui/png/ic_content_paste_black_24dp_1x.png \
 		ui/png/ic_open_in_new_black_24dp_1x.png \
 		ui/png/ic_select_all_black_24dp_1x.png \
@@ -706,6 +711,7 @@ qrc_resources.cpp: resources.qrc \
 		ui/png/ic_zoom_out_black_24dp.png \
 		ui/png/ic_picture_as_pdf_black_24dp_1x.png \
 		ui/png/ic_undo_black_24dp_1x.png \
+		ui/png/ic_text_format_black_24dp.png \
 		ui/png/ic_flip_to_back_black_24dp_1x.png \
 		ui/png/ic_content_cut_black_24dp.png \
 		ui/png/ic_zoom_in_black_24dp_1x.png \
@@ -1448,6 +1454,8 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../Qt5.8.0/5.8/gcc_64/include/QtGui/qinputmethod.h \
 		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/QButtonGroup \
 		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qbuttongroup.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/QDockWidget \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qdockwidget.h \
 		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/QHeaderView \
 		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qheaderview.h \
 		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qabstractitemview.h \
@@ -1463,6 +1471,10 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qstyle.h \
 		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qtabbar.h \
 		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qrubberband.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/QLineEdit \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qlineedit.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtGui/qtextcursor.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtGui/qtextformat.h \
 		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/QMenu \
 		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qmenu.h \
 		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/QMenuBar \
@@ -1471,6 +1483,10 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qstatusbar.h \
 		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/QToolBar \
 		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qtoolbar.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/QTreeWidget \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qtreewidget.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qtreeview.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qtreewidgetitemiterator.h \
 		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/QVBoxLayout \
 		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qboxlayout.h \
 		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qlayout.h \
@@ -2192,7 +2208,51 @@ agdiagramwindow.o: agdiagramwindow.cpp agdiagramwindow.h \
 		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qfiledevice.h \
 		../../Qt5.8.0/5.8/gcc_64/include/QtGui/qvector2d.h \
 		../../Qt5.8.0/5.8/gcc_64/include/QtGui/qtouchdevice.h \
-		ui_agdiagramwindow.h
+		ui_agdiagramwindow.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/QVariant \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/QAction \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qaction.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtGui/qicon.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qactiongroup.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/QApplication \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qapplication.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qcoreapplication.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qeventloop.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtGui/qguiapplication.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtGui/qinputmethod.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/QButtonGroup \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qbuttongroup.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/QGraphicsView \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qgraphicsview.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtGui/qpainter.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtGui/qtextoption.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtGui/qpen.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qscrollarea.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qframe.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qgraphicsscene.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/QHeaderView \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qheaderview.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qabstractitemview.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qabstractitemmodel.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qitemselectionmodel.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qstyleoption.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtGui/qvalidator.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtCore/qregularexpression.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qslider.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qabstractslider.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qstyle.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qtabbar.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qtabwidget.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qrubberband.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/QVBoxLayout \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qboxlayout.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qlayout.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qlayoutitem.h \
+		../../Qt5.8.0/5.8/gcc_64/include/QtWidgets/qgridlayout.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o agdiagramwindow.o agdiagramwindow.cpp
 
 qrc_resources.o: qrc_resources.cpp 

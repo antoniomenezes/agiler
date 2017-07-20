@@ -73,14 +73,18 @@
     <addaction name="actionNew_Diagram"/>
     <addaction name="action_Save_Diagram"/>
     <addaction name="separator"/>
-    <addaction name="actionNew_Table"/>
-    <addaction name="actionNew_Relationship"/>
    </widget>
    <addaction name="menu_File"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>18</width>
+     <height>18</height>
+    </size>
    </property>
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>
@@ -91,8 +95,6 @@
    <addaction name="actionNew_Diagram"/>
    <addaction name="action_Save_Diagram"/>
    <addaction name="separator"/>
-   <addaction name="actionNew_Table"/>
-   <addaction name="actionNew_Relationship"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <widget class="QDockWidget" name="modelDockWidget">
@@ -242,24 +244,6 @@
     </layout>
    </widget>
   </widget>
-  <action name="actionNew_Table">
-   <property name="icon">
-    <iconset resource="resources.qrc">
-     <normaloff>:/png/ui/png/ic_table_24dp.png</normaloff>:/png/ui/png/ic_table_24dp.png</iconset>
-   </property>
-   <property name="text">
-    <string>New &amp;Table</string>
-   </property>
-  </action>
-  <action name="actionNew_Diagram">
-   <property name="icon">
-    <iconset resource="resources.qrc">
-     <normaloff>:/png/ui/png/ic_add_circle_outline_black_24dp.png</normaloff>:/png/ui/png/ic_add_circle_outline_black_24dp.png</iconset>
-   </property>
-   <property name="text">
-    <string>New &amp;Diagram</string>
-   </property>
-  </action>
   <action name="action_Save_Diagram">
    <property name="icon">
     <iconset resource="resources.qrc">
@@ -269,13 +253,13 @@
     <string>&amp;Save Diagram</string>
    </property>
   </action>
-  <action name="actionNew_Relationship">
+  <action name="actionNew_Diagram">
    <property name="icon">
     <iconset resource="resources.qrc">
-     <normaloff>:/png/ui/png/ic_crossfoot_black_24dp.png</normaloff>:/png/ui/png/ic_crossfoot_black_24dp.png</iconset>
+     <normaloff>:/png/ui/png/ic_create_new_folder_black_24dp_1x.png</normaloff>:/png/ui/png/ic_create_new_folder_black_24dp_1x.png</iconset>
    </property>
    <property name="text">
-    <string>New Relationship</string>
+    <string>New &amp;Diagram</string>
    </property>
   </action>
  </widget>

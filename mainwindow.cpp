@@ -13,7 +13,6 @@ MainWindow::MainWindow(QWidget *parent) :
     tabifyDockWidget(ui->modelDockWidget, ui->subjectDockWidget);
     tabifyDockWidget(ui->modelDockWidget, ui->patternsDockWidget);
     ui->modelDockWidget->raise();
-
 }
 
 MainWindow::~MainWindow()
@@ -32,5 +31,6 @@ void MainWindow::on_actionNew_Diagram_triggered()
     subWindow->setWindowTitle("Diagram "+QString::number(lastSubWindowId));
     subWindow->setAttribute(Qt::WA_DeleteOnClose);
     ui->mdiArea->addSubWindow(subWindow);
-    subWindow->showMaximized();
+    subWindow->showMaximized();    
 }
+
